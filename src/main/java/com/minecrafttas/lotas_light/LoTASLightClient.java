@@ -209,29 +209,7 @@ public class LoTASLightClient implements ClientModInitializer {
 	}
 
 	private void drawHud(GuiGraphics context, float deltaTicks) { //@GraphicsDelta;
-		//# 1.21.11
-//$$		int i = ARGB.colorFromFloat(.2F, 1f, 1f, 1f);
-//$$		context.blit(RenderPipelines.GUI_TEXTURED, Identifier.fromNamespaceAndPath("lotaslight", "potion.png"), Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2
-//$$				- 10, Minecraft.getInstance().getWindow().getGuiScaledHeight()
-//$$						- 50, 0, 0, 20, 20, 20, 20, i);
-		//# 1.21.8
-//$$		int i = ARGB.colorFromFloat(.2F, 1f, 1f, 1f);
-//$$		context.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.fromNamespaceAndPath("lotaslight", "potion.png"), Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2
-//$$				- 10, Minecraft.getInstance().getWindow().getGuiScaledHeight()
-//$$						- 50, 0, 0, 20, 20, 20, 20, i);
-		//# 1.21.3
-//$$		int i = ARGB.colorFromFloat(.2F, 1f, 1f, 1f);
-//$$		context.blit(RenderType::guiTexturedOverlay, ResourceLocation.fromNamespaceAndPath("lotaslight", "potion.png"), Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2
-//$$				- 10, Minecraft.getInstance().getWindow().getGuiScaledHeight()
-//$$						- 50, 0, 0, 20, 20, 20, 20, i);
-		//# def
-		RenderSystem.enableBlend();
-		context.setColor(1f, 1f, 1f, .2F);
-		context.blit(new ResourceLocation("lotaslight", "potion.png"), Minecraft.getInstance().getWindow().getGuiScaledWidth() / 2 - 10, Minecraft.getInstance().getWindow().getGuiScaledHeight() //@ResourceLocation;
-				- 50, 0, 0, 20, 20, 20, 20);
-		context.setColor(1, 1, 1, 1);
-		RenderSystem.disableBlend();
-		//# end
+		return;
 	}
 
 	private void afterDrawEffects(GuiGraphics context, float deltaTicks) { //@GraphicsDelta;
